@@ -76,6 +76,7 @@ endif
 if get(g:, 'raku_unicode_abbrevs', 0)
     iabbrev <buffer> !(<) ⊄
     iabbrev <buffer> !(<=) ⊈
+    iabbrev <buffer> !(==) ≢
     iabbrev <buffer> !(>) ⊅
     iabbrev <buffer> !(>=) ⊉
     iabbrev <buffer> !(cont) ∌
@@ -88,6 +89,7 @@ if get(g:, 'raku_unicode_abbrevs', 0)
     iabbrev <buffer> (<) ⊂
     iabbrev <buffer> (<+) ≼
     iabbrev <buffer> (<=) ⊆
+    iabbrev <buffer> (==) ≡
     iabbrev <buffer> (>) ⊃
     iabbrev <buffer> (>+) ≽
     iabbrev <buffer> (>=) ⊇
@@ -121,8 +123,8 @@ if get(g:, 'raku_unicode_abbrevs', 0)
     iabbrev <buffer> Inf ∞
     iabbrev <buffer> atomic-add-fetch ⚛+=
     iabbrev <buffer> atomic-assign ⚛=
-    iabbrev <buffer> atomic-fetch ⚛
     iabbrev <buffer> atomic-dec-fetch --⚛
+    iabbrev <buffer> atomic-fetch ⚛
     iabbrev <buffer> atomic-fetch-dec ⚛--
     iabbrev <buffer> atomic-fetch-inc ⚛++
     iabbrev <buffer> atomic-inc-fetch ++⚛

@@ -179,7 +179,7 @@ syn match rakuType display "\%(::\)\@2<!\%(SeekType\%(::SeekFromBeginning\|::See
 " Don't put a "\+" at the end of the character class. That makes it so
 " greedy that the "%" " in "+%foo" won't be allowed to match as a sigil,
 " among other things
-syn match rakuOperator display "[-+/*~?|=^!%&,<>».;\\∈∉∋∌∩∪≼≽⊂⊃⊄⊅⊆⊇⊈⊉⊍⊎⊖∅∘]"
+syn match rakuOperator display "[-+/*~?|=^!%&,<>».;\\∈∉∋∌∩∪≼≽⊂⊃⊄⊅⊆⊇⊈⊉⊍⊎⊖∅∘≡≢]"
 syn match rakuOperator display "\%(:\@1<!::\@2!\|::=\|\.::\)"
 " these require whitespace on the left side
 syn match rakuOperator display "\%(\s\|^\)\@1<=\%(xx=\)"
@@ -188,7 +188,7 @@ syn match rakuOperator display "\%(&\.(\@=\|@\.\[\@=\|%\.{\@=\)"
 
 " Reduce metaoperators like [+]
 syn match rakuReduceOp display "\%(^\|\s\|(\)\@1<=!*\%([RSXZ\[]\)*[&RSXZ]\?\[\+(\?\%(\d\|[@%$][.?^=[:alpha:]]\)\@!\%(\.\|[^[{('".[:space:]]\)\+)\?]\+"
-syn match rakuSetOp    display "R\?(\%([-^.+|&]\|[<>][=+]\?\|cont\|elem\))"
+syn match rakuSetOp    display "R\?(\%([-^.+|&]\|[<>][=+]\?\|cont\|elem\|==\))"
 
 " Reverse, cross, and zip metaoperators
 exec "syn match rakuRSXZOp display \"[RSXZ]:\\@!\\%(\\a\\@=\\%(". s:alpha_metaops_or . "\\)\\>\\|[[:alnum:]]\\@!\\%([.,]\\|[^[,.[:alnum:][:space:]]\\)\\+\\|\\s\\@=\\|$\\)\""
